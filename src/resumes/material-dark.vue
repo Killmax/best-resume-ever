@@ -2,18 +2,29 @@
 <div class="resume">
   <div class="leftCol m_box">
     <div class="shadow"></div>
-    <div class="heading" id="myselfpic">
+    <div class="heading" v-if="person.lang !== 'en'" id="myselfpic">
     </div>
+
+    <div class="item" v-if="person.lang === 'en'">
+      <div class="section-headline">
+        {{ lang.about }}
+      </div>
+
+      <div class="aboutme margin-text">
+        {{person.about}}
+      </div>
+    </div>
+
     <div class="section-headline">
       {{ lang.contact }}
     </div>
     <div class="item">
       <div class="icon">
-        <i class="material-icons">account_circle</i>
+        <i class="fa fa-car"></i>
       </div>
-      <div class="text">
+      <div class="text margin-text">
         <ul>
-          <li> {{ lang.born }} {{person.birth.year}} {{ lang.bornIn }} {{person.birth.location}}</li>
+          <li>{{person.driving}}</li>
         </ul>
       </div>
     </div>
@@ -22,11 +33,8 @@
       <div class="icon">
         <i class="material-icons">location_city</i>
       </div>
-      <div class="text">
-        <ul>
-          <li>{{person.contact.street}}</li>
-          <li>{{person.contact.city}}</li>
-        </ul>
+      <div class="text margin-text">
+        {{person.contact.city}}
       </div>
     </div>
 
@@ -35,7 +43,7 @@
         <div class="icon">
           <i class="material-icons">phone</i>
         </div>
-        <div class="text">
+        <div class="text margin-text">
           {{person.contact.phone}}
         </div>
       </div>
@@ -46,7 +54,7 @@
         <div class="icon">
           <i class="material-icons">email</i>
         </div>
-        <div class="text">
+        <div class="text margin-text">
           {{person.contact.email}}
         </div>
       </div>
@@ -57,8 +65,7 @@
         <div class="icon">
           <i class="fa fa-github"></i>
         </div>
-        <div class="text">
-          <span>@{{person.contact.github}}</span>
+        <div class="text margin-text">
           <span>github.com/{{person.contact.github}}</span>
         </div>
       </div>
@@ -69,13 +76,13 @@
         <div class="icon">
           <i class="material-icons">language</i>
         </div>
-        <div class="text">
+        <div class="text margin-text">
           <span>{{person.contact.website}}</span>
         </div>
       </div>
     </a>
 
-    <div class="item last">
+    <div class="item">
       <div class="section-headline">
         {{ lang.skills }}
       </div>
@@ -88,6 +95,9 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="knowledge">
+        <span>{{person.knowledge}}</span>
       </div>
     </div>
   </div>
@@ -102,17 +112,21 @@
     <div class="block" v-for="experience in person.experience" :key="experience.company">
       <div class="block-helper"></div>
       <h3 class="headline">{{experience.position}} - {{experience.company}}</h3>
-        <div class="subheadline">{{experience.timeperiod}}</div>
-        <p class="info">
-          {{experience.description}}
-        </p>
+      <div class="subheadline">{{experience.timeperiod}}</div>
+      <p class="info">
+        {{experience.description}}
+      </p>
     </div>
     <div class="section-headline">{{ lang.education }}</div>
     <div class="block" v-for="education in person.education" :key="education.degree">
       <div class="block-helper"></div>
-      <div class="headline">{{education.degree}}</div>
+      <h3 class="headline">{{education.degree}}</h3>
+      <div class="subheadline">
+        {{education.place}}<br>
+        {{education.timeperiod}}
+      </div>
       <p class="info">
-        {{education.timeperiod}}, {{education.description}}
+        {{education.description}}
       </p>
     </div>
   </div>
@@ -131,6 +145,20 @@ export default Vue.component(name, getVueOptions(name));
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less" scoped>
+.aboutme {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  font-weight: 350;
+}
+.margin-text {
+  margin-top: 6px;
+}
+.knowledge {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 50px;
+}
 .resume {
   font-family:'Roboto' !important;
   background:#cccccc;
@@ -153,7 +181,7 @@ a {
   h2 {
     text-transform:uppercase;
     display:block;
-    font-size:1.17em;
+    font-size:2em;
     -webkit-margin-before:1em;
     -webkit-margin-after:1em;
     -webkit-margin-start:0;
@@ -163,24 +191,18 @@ a {
     padding-top:0;
     margin-top:0;
     letter-spacing:10px;
-    font-weight:400;
+    font-weight:600;
   }
   div {
-    margin-top:-5px;
-    margin-top:0;
     margin:0;
+    margin-top: 0px !important;
     padding:0;
     line-height:15pt;
-    font-weight:300;
-    font-weight:500;
-    letter-spacing:2px;
+    font-weight:600;
     letter-spacing:3px;
-    color:white;
-    color:#16151c;
     color:rgba(63,61,60,0.71);
     display:block;
-    font-size:0.67em;
-    font-size:10pt;
+    font-size:1.4em;
     -webkit-margin-before:2.33em;
     -webkit-margin-start:0;
     -webkit-margin-end:0;
@@ -196,7 +218,7 @@ a {
   font-size:10pt;
   opacity:0.8;
   margin-left:20px;
-  margin-top:40px;
+  margin-top:25px;
   margin-bottom:20px;
   color:#3f3d3c;
 }
