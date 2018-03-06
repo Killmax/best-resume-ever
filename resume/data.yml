@@ -3,10 +3,10 @@ name:
   first: Maxime
   middle:
   last: Bruguet
-about: Student in EPITECH in France, specialised in web development and more precisely in Javascript framework such as Angular and NodeJS.
-position: Web Developer
+about: Etudiant à EPITECH, spécialisé dans le développement web et plus précisément dans les frameworks Javascript tels que Angular ou NodeJS.
+position: Développeur web
 
-driving: Driving License (Learner)
+driving: Permis B en apprentissage
 
 birth:
   year: 1998
@@ -14,35 +14,35 @@ birth:
 
 experience:
 - company: Itelios
-  position: Salesforce Commerce Cloud Back-end Developer - Internship
-  timeperiod: April 2017 - July 2017
-  description: Programming and maintaining for a French online retailing brand. Working in team with the SCRUM method.
+  position: Développeur back-end Salesforce Commerce Cloud - Stage
+  timeperiod: Avril à Juillet 2017
+  description: Développement de nouvelles fonctionallités pour une grande marque de prêt-à-porter. Travail en équipe avec la méthode SCRUM.
 
 - company: Wezaart
-  position: Frontend Developer - Part-time Internship
-  timeperiod: Octobre 2016 - March 2017
-  description: Developing new version of a social media for artists. Working in a startup environment.
+  position: Développeur front-end - Stage à temps partiel
+  timeperiod: Octobre 2016 à Mars 2017
+  description: Développement de la nouvelle version d'un réseau social pour les artistes. Travail dans une ambiance startup.
 
 - company: Tetraèdre
-  position: Full-stack Developer - Internship
-  timeperiod: July 2015 - December 2015
-  description: Developing for various customers with different technologies. Working within a small team in a coworking space.
+  position: Développeur full-stack - Stage
+  timeperiod: Juillet 2015 à Décembre 2015
+  description: Diverses missions pour plusieurs clients utilisant différentes technologies. Travail dans une petite équipe dans un espace de coworking.
 
 education:
-- degree: Master - Expert in Information Technologies
-  timeperiod: September 2017 - expected July 2019
+- degree: Master - Expert en Technologie de l'Information
+  timeperiod: Septembre 2017 à Juillet 2019 (espéré)
   place: EPITECH, Paris, France
-  description: Business development and management skills
+  description: Développement d'un projet concret de startup et notions de management
 
-- degree: One Year Study Abroad
-  timeperiod: September 2017 - May 2018
+- degree: Erasmus durant un an
+  timeperiod: Septembre 2017 à Mai 2018
   place: Dublin City University, Dublin, Ireland
-  description: Business, data analysis, UI/UX and project management
+  description: Business, analyse de données, UI/UX et gestion de projet.
 
-- degree: Bachelor in Information Technologies - 2.77 GPA
-  timeperiod: October 2014 - July 2017
+- degree: Bachelor en Technologie de l'Information - 2.77 GPA
+  timeperiod: Octobre 2014 à Juillet 2017
   place: EPITECH, Lille, France
-  description: Object-oriented programming, system and network administration
+  description: Programmation orientée objet, administration sytème et réseau.
 
 # skill level goes 0 to 100
 skills:
@@ -60,7 +60,7 @@ skills:
   level: 80
 - name: Git
   level: 80
-knowledge: Also proficient in UNIX system and Python, and speaking French and English.
+knowledge: Connaissances en système Unix et également en Python, et bon niveau en Anglais (environ 900 au TOEIC).
 
 contact:
   email: maxime.bruguet@gmail.com
@@ -70,5 +70,5 @@ contact:
   website: http://maxime-brgt.xyz
   github: killmax
 # en, de, fr, pt, ca, cn, it, es, th, pt-br, ru, sv, id, hu, pl, ja, ka, nl, he, zh-tw, lt, ko, el
-lang: en
+lang: fr
 `
